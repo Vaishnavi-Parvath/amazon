@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+
+        nav {
+            width: 100vw;
+            height: 100px;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            position: fixed;
+            z-index: 10;
+        }
+
+        .nav2 {
+            width: 100vw;
+            height: 40px;
+            background-color: rgb(80, 76, 76);
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            position: relative;
+            top: 100px;
+            padding: 10px;
+            z-index: 9;
+        }
+
+        .navimg {
+            width: 100px;
+            margin-left: 15px;
+        }
+
+        .icons {
+            color: white;
+        }
+
+        .inpt {
+            width: 70%;
+            padding: 3px;
+            border: none;
+            margin: none;
+            cursor: pointer
+        }
+
+        /* .input::hover{
+            border:none;
+        } */
+        .input-group {
+            width: 650px;
+        }
+
+        .searchicon {
+            width: 45px;
+            /* justify-content:center; */
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .navimg2 {
+            width: 50px;
+        }
+
+        .language {
+            border: none;
+            color: white;
+            /* margin:none; */
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            /* background-color:red; */
+        }
+
+        .carousl {
+            position: relative;
+            top: 100px;
+            /* z-index: 5; */
+        }
+
+        .con1 {
+            width: 100vw;
+            height: 83vh;
+            background-color: rgb(67, 54, 54);
+            position: relative;
+            bottom: 125px;
+            background: linear-gradient(to bottom, transparent, #ffffff, #ffffff, #ffffff, #ffffff);
+            justify-content: center;
+            /* overflow: scroll; */
+
+        }
+
+        .box {
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            color: black;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.114);
+        }
+
+        .box1 {
+            width: 100%;
+            height: 40%;
+            /* background-color: red; */
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .box2 {
+            /* padding: 10px; */
+            width: 50%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .adimg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+
+        .section2 {
+            position: relative;
+            left: 100px;
+            width: 88vw;
+            margin-top: 20px;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.177);
+            height: 50vh;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+        }
+        .con2{
+            width: 100vw;
+            height: 900px;
+            margin-top: 30px;overflow: scroll;
+        }
+        footer{
+            width:100vw;
+            height:300px;
+            background-color: rgb(56, 56, 92);
+            display: flex;
+            color: white;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .unline{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <nav class="d-flex ">
+        <img src="./amazon-logo.png" alt="" srcset="" class="navimg">
+        <div class="d-flex gap-2 align-items-center">
+            <i class="fa-solid fa-location-dot icons fs-3 unline"></i>
+            <div>
+                <p class="text-light m-0">Delivering to Hyderabad 500063</p>
+                <p class="fw-bolder text-light m-0 unline">Update location</p>
+            </div>
+        </div>
+        <div class="input-group mb-3 ">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">All</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All Categories</a></li>
+                <li><a class="dropdown-item" href="#">Amazon devices</a></li>
+                <li><a class="dropdown-item" href="#">Amazon Fashion</a></li>
+            </ul>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button"
+                placeholder="Search Amazon.in">
+            <i class="fa-solid fa-magnifying-glass bg-warning searchicon"></i>
+        </div>
+        <div>
+            <img src="./Flag.webp" alt="" srcset="" class="navimg2">
+            <button class="btn btn-outline-secondary dropdown-toggle language" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">EN</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                <li><a class="dropdown-item" href="#">Telugu</a></li>
+            </ul>
+        </div>
+        <div class="text-light">
+            <p class="m-0">Hello, sign in</p>
+            <p class="fw-bold unline">Accounts & Lists <i class="fa-solid fa-sort-down"></i></p>
+        </div>
+        <div class="text-light">
+            <p class="m-0">Returns</p>
+            <p class="fw-bold unline">& Orders <i class="fa-solid fa-sort-down"></i></p>
+        </div>
+        <div class="text-light">
+            <!-- <p class="m-0">Returns</p> -->
+            <p class="fw-bold unline"><i class="fa-solid fa-cart-shopping fs-3"></i>Cart <i class="fa-solid fa-sort-down"></i>
+            </p>
+        </div>
+    </nav>
+    <div class="nav2 d-flex">
+        <p class="unline"><i class="fa-solid fa-bars"></i> All</p>
+        <p class="unline">Fresh <i class="fa-solid fa-sort-down"></i></p>
+        <p class="unline">MX Player</p>
+        <p class="unline">Sell</p>
+        <p class="unline">Best Sellers</p>
+        <p class="unline">Today's Deals</p>
+        <p class="unline">Mobiles</p>
+        <p class="unline">Prime <i class="fa-solid fa-sort-down"></i></p>
+        <p class="unline">Customer Service</p>
+        <p class="unline">New Releases</p>
+        <p class="unline">Electronics</p>
+        <p class="unline">Amazon Pay</p>
+        <p class="unline">Fashion</p>
+        <p class="unline">Home & Kitchen</p>
+        <p class="unline">Computers</p>
+        <p class="unline">Books</p>
+        <p class="unline">Cars & Motorbike</p>
+    </div>
+    <div class="main">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner carousl">
+                <div class="carousel-item active">
+                    <img src="./img1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="con1 d-flex flex-column gap-5">
+            <div class="boxes d-flex gap-5" style="justify-content: center;">
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./1.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./1.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Automotive essentials|Up to 60% off</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./2.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./2.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./2.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./2.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Starting ₹149 | Headphones</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./3.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./3.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./3.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./3.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./4.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./4.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./4.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./4.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes d-flex gap-5" style="justify-content: center;">
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Under ₹499 | Deals on home improvement essentials</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./5.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./5.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./5.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./5.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <!-- <u class="text-primary">see more</u> -->
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Revamp your home in style</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./6.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./6.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./6.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./6.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Appliances for your home | Up to 55% off</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./7.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./7.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./7.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./7.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./1.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./1.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div>
+                <p class="fs-3 fw-bold">Petrol & electric vehicles from stores near you</p>
+                <u class="text-primary fw-5 unline">see more</u>
+                <!-- <u class="text-primary">see more</u> -->
+            </div>
+            <div class="d-flex">
+                <img src="./bike1.jpg" alt="" srcset="">
+                <img src="./bike2.jpg" alt="" srcset="">
+                <img src="./bike3.jpg" alt="" srcset="">
+                <img src="./bike1.jpg" alt="" srcset="">
+                <img src="./bike2.jpg" alt="" srcset="">
+                <img src="./bike3.jpg" alt="" srcset="">
+            </div>
+            <!-- <img src="./1.1.jpg" alt="" srcset=""> -->
+        </div>
+        <div class="section2">
+            <div>
+                <p class="fs-3 fw-bold">Up to 75% off | A wide range of electronics & accessories from Small businesses</p>
+                <u class="text-primary fw-5 unline">see more</u>
+                <!-- <u class="text-primary">see more</u> -->
+            </div>
+            <div class="d-flex">
+                <img src="./ad1.jpg" alt="" srcset="">
+                <img src="./ad2.jpg" alt="" srcset="">
+                <img src="./ad3.jpg" alt="" srcset="">
+                <img src="./ad4.jpg" alt="" srcset="">
+                <img src="./ad1.jpg" alt="" srcset="">
+                <img src="./ad2.jpg" alt="" srcset="">
+                <img src="./ad3.jpg" alt="" srcset="">
+                <img src="./ad4.jpg" alt="" srcset="">
+                
+            </div>
+            <!-- <img src="./1.1.jpg" alt="" srcset=""> -->
+        </div>
+        <div class="con2 d-flex flex-column gap-5">
+            <div class="boxes d-flex gap-5" style="justify-content: center;">
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./1.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./1.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Automotive essentials|Up to 60% off</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./2.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./2.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./2.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./2.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Starting ₹149 | Headphones</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./3.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./3.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./3.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./3.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bold mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./4.1.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./4.2.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./4.3.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./4.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes d-flex gap-5" style="justify-content: center;">
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Under ₹499 | Deals on home improvement essentials</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./5.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./5.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./5.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./5.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <!-- <u class="text-primary">see more</u> -->
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Revamp your home in style</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./6.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./6.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./6.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./6.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Appliances for your home | Up to 55% off</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./7.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./7.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./7.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./7.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="fw-bolder mx-2 my-0">Explore more from small Businesses</p>
+                    <u class="text-primary mx-2 unline">see more</u>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img src="./1.1.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.2.jpg" alt="" srcset="" class="adimg">
+                        </div>
+                    </div>
+                    <div class="box1 d-flex gap-2">
+                        <div class="box2">
+                            <img class="adimg" src="./1.3.jpg" alt="" srcset="">
+                        </div>
+                        <div class="box2">
+                            <img src="./1.4.jpg" class="adimg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="mx-5 my-5">
+                <h4>Get to know us</h4>
+                <p class="unline">About Amazon</p>
+                <p class="unline">About Amazon</p>
+                <p class="unline">Careers</p>
+                <p class="unline">Press Releases</p>
+                <p class="unline">Amazon Science</p>
+            </div>
+            <div class="mx-5 my-5">
+                <h4>Connect with Us</h4>
+                <p class="unline">Facebook</p>
+                <p class="unline">Twitter</p>
+                <p class="unline">Instagram</p>
+            </div>
+            <div class="mx-5 my-5">
+                <h4>Let Us Help You</h4>
+                <p class="unline">Your Account</p>
+                <p class="unline">Returns Centre</p>
+                <p class="unline">Help</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
